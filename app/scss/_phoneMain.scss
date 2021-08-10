@@ -1,0 +1,108 @@
+.phone {
+  &__main {
+    padding: 11px;
+		line-height: 1.5;
+  }
+
+	.chat {
+		font-size: 9px;
+		margin: 16px 0;
+
+		&:first-of-type {
+			margin-top: 0;
+		}
+
+		&>div {
+			margin: 8px 0;
+			padding: 5px 9px;
+
+			&:first-of-type {
+				margin-top: initial;
+			}
+		}
+
+		&__image {
+			height: 38px;
+			width: 38px;
+			border-radius: 10px;
+		}
+
+		&__send {
+			max-width: 70%;
+			color: $violetModerate;
+			background: rgba($violetDarkGrayish, 0.2);
+			border-radius: 15px 10px 10px 5px;
+
+			&__tarif {
+				max-width: 80%;
+				padding: 7px 9px !important;
+				background: linear-gradient(to right, $lightMagenta, $lightViolet);
+				border-radius: 15px 10px 10px 5px;
+			}
+
+			&__info {
+				color: rgba($white, 0.6);
+
+				i {
+					font-size: 14px;
+					margin-right: 8px;
+					color: $magentaVeryLight;
+				}
+			}
+
+			&__price {
+				color: $white;
+				font-size: 14px;
+				font-weight: 500;
+				margin-right: 8px;
+			}
+		}
+
+		&__receive {
+			margin: 15px 0;
+			width: fit-content;
+			max-width: 65%;
+			color: $violetDesaturatedDark;
+			background: $white;
+			border-radius: 10px 15px 5px 10px;
+			left: 100%;
+			transform: translateX(-100%);
+
+			&__image {
+				max-width: 75%;
+				padding: 0 !important;
+				background: transparent;
+			}
+		}
+	}
+
+	&__message {
+		::placeholder {
+			color: $blueGrayish;
+		}
+
+		&__area {
+			padding: 12px 9px 12px 20px;
+			border-radius: 25px;
+			border: none;
+			outline: none;
+			width: 100%;
+			font-size: 12px;
+			background-color: $white;
+		}
+
+		&__btn {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			background-color: $violetVeryDesaturatedDark;
+			outline: $magentaVeryLight;
+			color: white;
+			border: none;
+			position: absolute;
+			bottom: 100%;
+			left: 100%;
+			transform: translateX(calc(-100% - 5px)) translateY(calc(100% + 6px));
+		}
+	}
+}

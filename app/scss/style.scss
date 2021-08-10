@@ -1,0 +1,112 @@
+@import 'mixins';
+@import 'variables';
+@import 'globals';
+@import 'phone';
+@import 'phoneHeader';
+@import 'phoneMain';
+
+body {
+  background: $violetLightGrayish;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  @include breakpoint-up(xlarge) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.gradient {
+  height: 75vh;
+  max-height: 500px;
+  width: 100%;
+  background: linear-gradient($lightMagenta, $lightViolet);
+  border-radius: 0 0 1400px 700px;
+  position: absolute;
+  top: 0;
+  left: -50%;
+  z-index: -1;
+
+  @include breakpoint-up(medium) {
+    border-radius: 0 0 700px 700px;
+  }
+
+	@include breakpoint-up(xlarge) {
+		width: 30%;
+		max-height: 80%;
+		left: -5%;
+	}
+}
+
+main {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 2rem 0 4rem;
+
+  .presentation {
+    text-align: center;
+
+    &__content {
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      color: $violetVeryDesaturatedDark;
+    }
+
+    &__text {
+      color: $violetDarkGrayish;
+      font-size: 15px;
+      line-height: 1.5;
+      margin-top: 1.5rem;
+    }
+  }
+
+  @include breakpoint-up(xlarge) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    padding: 0;
+    width: 100%;
+
+    &>div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .presentation {
+			text-align: left;
+
+      &__content {
+        max-width: 430px;
+        margin-left: 0;
+      }
+
+			&__title {
+				font-size: 2.2rem;
+			}
+    }
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 1rem;
+  font-size: 10px;
+  width: 100%;
+  text-align: center;
+  color: $violetDarkGrayish;
+
+  & a {
+    color: $lightViolet;
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: $lightMagenta;
+    }
+  }
+}

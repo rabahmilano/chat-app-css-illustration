@@ -1,0 +1,71 @@
+.phone {
+	&__header {
+		background: linear-gradient(to right, $lightViolet, $lightMagenta);
+		border-radius: 25px 25px 5px 5px;
+		padding: 30px 12px 12px;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -8px;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 55%;
+			height: 25px;
+			background: $white;
+			border-radius: 20px;
+		}
+	}
+
+	&__contact {
+		& i {
+			color: $white;
+		}
+
+		&__image {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			padding: 1px;
+			background-color: $white;
+			margin: 0 8px;
+		}
+
+		& .heading {
+			color: $blueGrayish;
+			font-size: 13px;
+			line-height: 1.5;
+		}
+
+		& .sub-heading {
+			color: $violetPale;
+			font-size: 9px;
+		}
+	}
+
+	&__hamburger {
+		height: 12px;
+		padding: 1px;
+	}
+
+	&__burger {
+		width: 2px;
+		height: 2px;
+		background: $violetLightGrayish;
+		border-radius: 50%;
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -4px;
+			@extend .phone__burger;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 4px;
+			@extend .phone__burger;
+		}
+	}
+}
